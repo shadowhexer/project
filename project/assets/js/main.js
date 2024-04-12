@@ -8,28 +8,6 @@
 (function() {
   "use strict";
   AOS.init(); // Required to run AOS
-/*
-  document.addEventListener("DOMContentLoaded", function () {
-    const changeElement = document.querySelector('#navbar nav li:last-child a [href="href_value"]');
-
-    // Fetch user login status
-    fetch('http://localhost/login/forms/login.php', {
-        method: 'GET',
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Handle the response
-        if (data.status === 'success') {
-            // User is logged in
-            changeElement.href = 'http://localhost/login/forms/logout.php';
-            changeElement.innerText = 'Logout';
-        } else {
-            // User is not logged in
-            changeElement.href = 'login';
-            changeElement.innerText = 'Get Started';
-        }
-    });
-}); */
 
   /**
    * Easy selector helper function

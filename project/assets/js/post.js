@@ -72,7 +72,7 @@ fetch('forms/comments.php', {
         newComment.setAttribute("id", "comment"+index);
         newComment.setAttribute("class", "comment");
 
-        newComment.innerHTML = '<div class="d-flex"><div class="comment-img"><img id="avatar" src="'+ imageUrl + '" alt=""></div><div><h5><a href="/project/profile.php?user_id='+ data[index].id + '" id="name">' + data[index].name + '</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5><time id="date">'+ data[index].date_comment +'</time><p id="comment_field">'+ data[index].comments + '</p></div></div>';
+        newComment.innerHTML = '<div class="d-flex"><div class="comment-img"><img id="avatar" src="'+ imageUrl + '" alt=""></div><div><h5><a href="/project/profile.php?user_id='+ data[index].id + '" id="name">' + data[index].name + '</h5><time id="date">'+ data[index].date_comment +'</time><p id="comment_field">'+ data[index].comments + '</p></div></div>';
         comment.appendChild(newComment);
       }
         
