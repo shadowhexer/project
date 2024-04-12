@@ -33,6 +33,7 @@
   <script>
       $(function() {
          $("#includeHtml").load("header.php");
+         $("#footer").load("footer.html");
       });
    </script>
 </head>
@@ -84,101 +85,6 @@
                 </ul>
               </div>
             </article>
-
-            <!--
-            <article class="entry" data-aos="zoom-in" data-aos-duration="1000">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Art Style Searching: A Natural Process</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Akima Leyson</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2024-01-01">Jan 1, 2024</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">56 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Young artists on the internet, from what I've seen, seem particularly fixated on finding a distinct "art style". Tutorial videos and social media
-                  posts dedicated to helping people find their style is very prevalent. As someone who engages with the art community a lot, I've seen a lot.
-                  Don't get me wrong, I'm all for beginner artists taking a step to grasping a solid, recognizable brand. But it's less about ...
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>
-              </div>
-
-            </article>
-
-           
-            <article class="entry" data-aos="zoom-in" data-aos-duration="1000">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Watching Anime Doesn't Make You a Weeb</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Joshua Tubo</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2024-01-01">Jan 1, 2024</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">70 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  Watching anime does not make you a weeb. In some circles, this would be expected. Nevertheless, I've frequently had to defend myself against 
-                  such an insult. I've been watching anime (Japanese animation) and reading manga (Japanese comic books) since before I started elementary school. However,
-                  I consider myself a former weeb, someone who has seen the light and switched.
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>
-              </div>
-
-            </article>
-
-            
-            <article class="entry" data-aos="zoom-in" data-aos-duration="1000">
-
-              <div class="entry-img">
-                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
-              </div>
-
-              <h2 class="entry-title">
-                <a href="blog-single.html">Caught in a never-endin' game. Seems like the world's still trying to tame me.</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Barnaby Brooks</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2024-01-01">Jan 1, 2024</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                  If that's the way, I will obey. Beautifully struggle every day. Should we have a little kiss. While seeing both of our hourglasses. Let's make a plan to meet somewhere that is
-                  Most far from "goodbye".
-                </p>
-                <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
-                </div>
-              </div>
-
-            </article><!-- End blog entry -->
 
             <div class="blog-pagination">
               <ul class="justify-content-center">
@@ -234,66 +140,7 @@
   </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="footer-top">
-    <div class="container">
-      <div class="row" data-aos="fade-up" data-aos-duration="1000">
-
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-info">
-            <h3>ITE 18</h3>
-            <p>
-              Ampayon, National Highway, NH1 <br>
-              Butuan City, Philippines<br><br>
-              <strong>Phone:</strong> +639123456789<br>
-              <strong>Email:</strong> contact@us.com<br>
-            </p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of Service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">  </div>
-
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Join our mailing list!</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Sign up">
-          </form>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="copyright">
-      &copy; Copyright <strong><span>ITE18</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </div>
-</footer><!-- End Footer -->
+<footer id="footer"></footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -308,6 +155,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/category.js></script>
 
   <script>
 
@@ -330,31 +178,6 @@
                 document.getElementById('datePost').innerText = data.date_post;
                 document.getElementById('comments-count').textContent = data.count + " Comment(s)";
                 document.getElementById('title').innerHTML = data.post_title;
-
-            } catch (error) {
-                console.error('JSON Error: ', error);
-            }
-        })
-        .catch(error => {
-            console.error('Fetch error: ', error);
-        });
-
-    // Get categories
-    fetch('forms/categories.php', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json()) // Get the response as text
-        .then(data => {
-
-            try {
-                document.getElementById('general').textContent = '(' + data.general + ')';
-                document.getElementById('digital_art').textContent = '(' + data.digital_art + ')';
-                document.getElementById('politics').textContent = '(' + data.politics + ')';
-                document.getElementById('reviews').textContent = '(' + data.reviews + ')';
-                document.getElementById('education').textContent = '(' + data.education + ')';
 
             } catch (error) {
                 console.error('JSON Error: ', error);

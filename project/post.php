@@ -50,6 +50,7 @@
   <script>
       $(function() {
          $("#includeHtml").load("header.php");
+         $("#footer").load("footer.html");
       });
    </script>
 </head>
@@ -161,11 +162,11 @@
               <h3 class="sidebar-title">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
-                  <li><a href="#">General <span>(25)</span></a></li>
-                  <li><a href="#">Digital Art <span>(12)</span></a></li>
-                  <li><a href="#">Politics <span>(5)</span></a></li>
-                  <li><a href="#">Reviews <span>(22)</span></a></li>
-                  <li><a href="#">Education <span>(8)</span></a></li>
+                  <li><a href="#">General <span id="general">(0)</span></a></li>
+                  <li><a href="#">Digital Art <span id="digital_art">(0)</span></a></li>
+                  <li><a href="#">Politics <span id="politics">(0)</span></a></li>
+                  <li><a href="#">Reviews <span id="reviews">(0)</span></a></li>
+                  <li><a href="#">Education <span id="education">(0)</span></a></li>
                 </ul>
               </div><!-- End sidebar categories-->
 
@@ -173,33 +174,10 @@
               <div class="sidebar-item recent-posts">
                 <div class="post-item clearfix">
                   <img src="assets/img/blog/blog-recent-1.jpg" alt="">
-                  <h4><a href="blog-single.html">Tiger, Bunny, and Fandoms in the 2010s</a></h4>
-                  <time datetime="2024-01-01">Jan 1, 2024</time>
+                  <h4><a href="blog-single.html">Post Name</a></h4>
+                  <time datetime="2024-01-01">YYYY-mm-dd</time>
                 </div>
 
-                <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-2.jpg" alt="">
-                  <h4><a href="blog-single.html">Friendships at the Workplace</a></h4>
-                  <time datetime="2024-01-01">Jan 1, 2024</time>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-3.jpg" alt="">
-                  <h4><a href="blog-single.html">This is a Blog Post</a></h4>
-                  <time datetime="2024-01-01">Jan 1, 2024</time>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-4.jpg" alt="">
-                  <h4><a href="blog-single.html">History Has Its Eyes on You</a></h4>
-                  <time datetime="2024-01-01">Jan 1, 2024</time>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/blog/blog-recent-5.jpg" alt="">
-                  <h4><a href="blog-single.html">In the Eye of a Hurricane There is Quiet</a></h4>
-                  <time datetime="2024-01-01">Jan 1, 2024</time>
-                </div>
               </div><!-- End sidebar recent posts-->
             </div><!-- End sidebar -->
           </div><!-- End blog sidebar -->
@@ -209,66 +187,7 @@
   </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="footer-top">
-    <div class="container">
-      <div class="row" data-aos="fade-up" data-aos-duration="1000">
-
-        <div class="col-lg-3 col-md-6">
-          <div class="footer-info">
-            <h3>ITE 18</h3>
-            <p>
-              Ampayon, National Highway, NH1 <br>
-              Butuan City, Philippines<br><br>
-              <strong>Phone:</strong> +639123456789<br>
-              <strong>Email:</strong> contact@us.com<br>
-            </p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of Service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 footer-links">  </div>
-
-        <div class="col-lg-4 col-md-6 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Join our mailing list!</p>
-          <form action="" method="post">
-            <input type="email" name="email"><input type="submit" value="Sign up">
-          </form>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>ITE18</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/sailor-free-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+<footer id="footer"></footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -287,6 +206,7 @@
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="assets/js/post.js"></script>
+  <script src="assets/js/category.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
