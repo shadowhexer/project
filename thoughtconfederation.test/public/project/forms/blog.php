@@ -4,7 +4,7 @@
     require 'connect.php';
     
     // Post query
-    $posts = "SELECT u.user_id, u.display_name, p.post_id, p.title_image, p.image_caption, p.post_title, p.blog_post, p.date_post FROM account.users u JOIN (SELECT post_id, title_image, image_caption, post_title, user_id, blog_post, date_post FROM account.post GROUP BY post_id, blog_post, date_post) p ON u.user_id = p.user_id";
+    $posts = "SELECT p.blog_count, u.user_id, u.display_name, p.post_id, p.title_image, p.image_caption, p.post_title, p.blog_post, p.date_post FROM account.users u JOIN (SELECT COUNT(*) AS blog_count, post_id, title_image, image_caption, post_title, user_id, blog_post, date_post FROM account.post GROUP BY post_id, blog_post, date_post) p ON u.user_id = p.user_id";
 
     $postQuery = $db->prepare($posts);
     $postQuery->execute();
@@ -28,11 +28,13 @@
             'image' => $post['title_image'],
             'post_title' => $post['post_title'],
             'date_post' => $post['date_post'],
-            'username' => $post['display_name']
+            'username' => $post['display_name'],
+            'blog_count' =>$post['blog_count']
         );
     }
 
-    $json = json_encode($postDisplay + $numOfComments, JSON_PRETTY_PRINT); // To arrange JSON's data
+    /*
+        $json = json_encode($postDisplay + $numOfComments, JSON_PRETTY_PRINT); // To arrange JSON's data
 
     if ($json === false) 
     {
@@ -47,7 +49,7 @@
         // Set HTTP response status code to: 500 - Internal Server Error
         http_response_code(500);
     }
-    $db = null;
-    echo $json;
-    exit();
+    */
+
+    header('Content-Type: text/html; charset=utf-8;');
 ?>

@@ -2,7 +2,7 @@
 	/* Handle CORS */
 
 	// Specify domains from which requests are allowed
-	header('Access-Control-Allow-Origin: http://127.0.0.1:3000');
+	header('Access-Control-Allow-Origin: http://127.0.0.1:3000, /thoughtconfederation.test/');
 
 	// Specify which request methods are allowed
 	header('Access-Control-Allow-Methods: PUT, GET, POST, DELETE, OPTIONS');
@@ -32,4 +32,5 @@
 	{
 		print_r($e);
 	}
+	$_SESSION['url'] = $_SERVER['REQUEST_URI'];
 ?>

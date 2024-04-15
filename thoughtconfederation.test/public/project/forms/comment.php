@@ -5,7 +5,7 @@
 
     if(!isset($_SESSION['id']))
     {
-        header("Location: /project/login.php");
+        header("Location: /project/sign-in.php");
         exit();
     }
 

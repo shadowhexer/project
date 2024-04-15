@@ -14,44 +14,5 @@
     $catQuery->execute();
     $category = $catQuery->fetch(PDO::FETCH_ASSOC);
     
-    header('Content-Type: text/html; charset=utf-8'); // This peace of shit is what took me 4 days to find out.
-
-
-    /*
-    $postDisplay = array(
-        'id1' => $post['post_id'],
-        'image' => $post['title_image'],
-        'caption' => $post['image_caption'],
-        'post_title' => $post['post_title'],
-        'blog_post' => $post['blog_post'],
-        'date_post' => $post['date_post'],
-        'username' => $post['display_name'],
-        'id2' => $post['user_id'],
-        'avatar' => md5($hash),
-        'bio' => $post['biography']
-    );
-    $categories = array('categories' => $category['category'], 'url' => $category['category_url']);
-
-    $json = json_encode($postDisplay + $categories, JSON_PRETTY_PRINT); // To arrange JSON's data
-
-    if ($json === false) 
-    {
-        // Avoid echo of empty string (which is invalid JSON), and
-        // JSONify the error message instead:
-        $json = json_encode(["jsonError" => json_last_error_msg()]);
-        if ($json === false)
-        {
-            // This should not happen, but we go all the way now:
-            $json = '{"jsonError":"unknown"}';
-        }
-        // Set HTTP response status code to: 500 - Internal Server Error
-        http_response_code(500);
-    } else {header('Content-Type: application/json; charset=utf-8'); }
-
-    echo $json;
-    //echo "/project/forms/post.php?post_id=$id";
-    $db = null;
-    //exit();
-    header("Location: //thoughtconfederation.test/project/post.php");
-    */
+    header('Content-Type: text/html; charset=utf-8'); // This peace of sht is what took me 4 days to find out.
 ?>
