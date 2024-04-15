@@ -1,12 +1,33 @@
-// Function to handle post submission
-document.getElementById('postBtn').addEventListener('click', function() {
-    var postContent = CKEDITOR.instances['editor'].getData();
-    if (postContent.trim() !== "") {
-        addPostToTimeline(postContent);
-        // Reset CKEditor content
-        CKEDITOR.instances['editor'].setData('');
+fetch('forms/add-post.php', {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json'
     }
+})
+    .then(response => response.json()) // Get the response as text
+    .then(data => {
+
+        try {
+            // Function to handle post submission
+                document.getElementById('postBtn').addEventListener('click', function () {
+                    var postContent = CKEDITOR.instances['editor'].getData();
+                    if (postContent.trim() !== "") {
+                        data.blog_post = postContent;
+                        CKEDITOR.instances['editor'].setData('');
+            }
 });
+                
+            
+
+        } catch (error) {
+            console.error('JSON Error: ', error);
+        }
+    })
+    .catch(error => {
+        console.error('Fetch error: ', error);
+    });
+
+
 
 // Function to add a new post to the top of the timeline
 function addPostToTimeline(postContent) {
@@ -64,12 +85,12 @@ function loadPostsFromLocalStorage() {
 }
 
 // Load posts from local storage when the page loads
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     loadPostsFromLocalStorage();
 });
 
 let subMenu = document.getElementById("subMenu");
 
-    function toggleMenu() {
-        subMenu.classList.toggle("open-menu");
-    }
+function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+}
