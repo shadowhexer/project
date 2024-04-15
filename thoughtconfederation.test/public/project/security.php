@@ -5,7 +5,7 @@
     if(!isset($_SESSION['id']))
     {
         echo 'Does not exist';
-        header("Location: /project/login.php");
+        header("Location: /project/sign-in.php");
         exit();
     }
 
@@ -44,47 +44,20 @@
         <link href="assets/css/style.css" rel="stylesheet">
         <link href="assets/css/intlTelInput.css" rel="stylesheet">
         <link href="assets/css/intlTelInput.min.css" rel="stylesheet">
-        
-    
-        <!-- =======================================================
-        * Template Name: Sailor
-        * Updated: Jan 09 2024 with Bootstrap v5.3.2
-        * Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-        * Author: BootstrapMade.com
-        * License: https://bootstrapmade.com/license/
-        ======================================================== -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+    $(function() {
+        $("#includeHtml").load("header.php");
+    });
+    </script>
+</head>
 
-        <!-- ======= Header ======= -->
+<body>
+
+    <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex align-items-center">
-          
-           <a href="index.html" class="logo me-auto" title="Home"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-    
-          <nav id="navbar" class="navbar">
-            <ul>
-              <li><a href="index.html" class="active" title="Home">Home</a></li>
-              <li><a href="portfolio.html">Gallery</a></li>
-    
-              <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="index.html#about">About us</a></li>
-                  <li><a href="team.html">Team</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                </ul>
-              </li>
-    
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="weather.html">Weather</a></li>
-              <li><a href="forms/logout.php" class="getstarted">Logout</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-    
-        </div>
-      </header><!-- End Header -->
-      </head>
-    
-    <body>
+        <div class="container d-flex align-items-center" id="includeHtml"></div>
+    </header><!-- End Header -->
 
         <!-- Body Credits to Bootdey @ https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details -->
 
@@ -92,15 +65,10 @@
                     <div class="col-xl-8">
                         <!-- Account details card-->
                         <div class="card mb-4">
-                            <div class="card-header">security Details</div>
+                            <div class="card-header">Password Details</div>
                             <div class="card-body">
                                 <form class="profile" id="profile" action="forms/update.php" method ="POST">
                                     <!-- Form Row-->
-
-                                    <div class="mb-3">
-                                        <label class="small mb-1" for="username">Username</label>
-                                        <input class="form-control" name="username" id="username" type="text" autocomplete="username" placeholder="Enter your username" value="">
-                                    </div>
 
                                     <div class="row gx-3 mb-3">
                                         <!-- Form Group (username)-->

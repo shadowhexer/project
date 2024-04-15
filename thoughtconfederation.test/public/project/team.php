@@ -96,7 +96,9 @@
                     <!-- austin -->
                     <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-right" data-aos-duration="1000">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="https://www.gravatar.com/avatar/<?php echo md5($result['email']); ?>?s=200" class="img-fluid" alt=""></div>
+                            <div class="pic"><img
+                                    src="https://www.gravatar.com/avatar/<?php echo md5($result['email']); ?>?s=200"
+                                    class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4><?php echo $result['display_name']; ?></h4>
                                 <span>Bachelor of Science in Information Technology</span>

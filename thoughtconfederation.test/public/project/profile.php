@@ -121,14 +121,17 @@
                     </div>
                     <div class="col-lg-7 col-xl-6">
 
-                    <?php
+                        <?php
                         if(($result['role']) === 'admin' && $_SESSION['id']  === $result['user_id'])
                         {
                             echo '<div class="card card-white grid-margin">
                             <div class="card-body">
                                 <div class="post">
+                                <form action="/project/forms/add-post.php" method="post">
                                     <!-- Replace the textarea with CKEditor -->
                                     <textarea name="editor" id="editor" rows="4"></textarea>
+                                    <input name="post-id" type="text" value="'.$result['user_id'].'"
+                                            hidden="true">
                                     <div class="post-options">
                                         <a href="#"><i class="fa fa-camera"></i></a>
                                         <a href="#"><i class="fas fa-video"></i></a>
@@ -136,32 +139,30 @@
                                         <button class="btn btn-outline-primary float-right" id="postBtn"
                                             style="background-color: #143642; border: none; color:aliceblue; margin-left: 500px; margin-top: -30px;">Post</button>
                                     </div>
+                                </form>
                                 </div>
                             </div>
                         </div>';
                         }
-                        else { echo '';}
-                    ?>
+                        else { echo '';} ?>
+
                         <div class="profile-timeline">
-                            <!-- blog ENTRY 1-->
-            <article class="entry" data-aos="zoom-in" data-aos-duration="1000">
-
-<div class="entry-img">
-  <img src="" id="title_image" alt="" class="img-fluid">
-</div>
-
-<h2 class="entry-title">
-  <a href="" id="title">Title</a>
-</h2>
-
-<div class="entry-meta">
-  <ul>
-    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="" id="posterName">Name</a></li>
-    <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time id="datePost">YYYY-mm-dd</time></li>
-    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i><div id="comments-count">N/A</div></li>
-  </ul>
-</div>
-</article>
+                            <section id="blog" class="blog">
+                                <div class="container" data-aos="fade-up">
+                                    <div class="col-lg-8 entries" id="field">
+                                        <?php
+                                                $index = 1;
+                                                if(isset($post['post_title']))
+                                                {
+                                                    foreach($posts as $post)
+                                                    {
+                                                        echo '<article class="entry" data-aos="zoom-in" data-aos-duration="1000"><h2 class="entry-title"><a href="/project/post.php?post_id='.$postID.'">'.$post['post_title'].'</a></h2><div class="entry-meta" ><ul><li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="" id="posterName">'.$post['display_name'].'</a></li><li class="d-flex align-items-center"><i class="bi bi-clock"></i><timeid="datePost">'.$post['date_post'].'</time></li><li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i><div id="comments-count">'.$numOfComments['count'].' Comment(s)</div></li></ul></div></article>';
+                                                    }
+                                                }
+                                            ?>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                     <div class="col-lg-12 col-xl-3">
@@ -250,11 +251,11 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js" type="text/javascript"></script>
     <script src="assets/js/user.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
     <!-- At the end of your HTML file, just before the closing </body> tag -->
@@ -262,7 +263,9 @@
     <!-- Include CKEditor library -->
     <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 
-    <script> CKEDITOR.replace('editor'); </script>
+    <script>
+    CKEDITOR.replace('editor');
+    </script>
 </body>
 
 </html>
